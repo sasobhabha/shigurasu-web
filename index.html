@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shigurasu</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect rx='14' width='32' height='22' y='5' fill='%233adcc8'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/sea.css" />
+</head>
+<body>
+  <div id="wallpaper" data-paper=""></div>
+
+  <div id="shore" aria-hidden="true">
+    <div class="pebble glass tint-seafoam" style="width:190px;height:124px;left:-48px;top:108px;border-radius:48% 52% 50% 50% / 46% 54% 50% 48%"></div>
+    <div class="pebble glass tint-sage" style="width:96px;height:78px;left:150px;top:78px;border-radius:50% 48% 52% 50% / 44% 56% 46% 54%"></div>
+    <div class="pebble glass tint-rose" style="width:74px;height:108px;left:46%;top:-36px;border-radius:46% 54% 50% 50% / 38% 42% 58% 62%"></div>
+    <div class="pebble glass tint-frost" style="width:230px;height:74px;left:7%;top:46%;border-radius:999px"></div>
+    <div class="pebble glass tint-aqua" style="width:128px;height:92px;left:-18px;bottom:150px;border-radius:46% 54% 50% 50% / 52% 44% 56% 48%"></div>
+    <div class="pebble glass tint-cobalt" style="width:86px;height:118px;right:-20px;top:96px;border-radius:48% 52% 42% 58% / 40% 48% 52% 60%"></div>
+    <div class="pebble glass tint-sky" style="width:150px;height:104px;right:7%;top:34%;border-radius:50% 46% 54% 50% / 48% 52% 48% 52%"></div>
+    <div class="pebble glass tint-amber" style="width:132px;height:158px;right:-8px;bottom:108px;border-radius:48% 52% 44% 56% / 42% 46% 54% 58%"></div>
+    <div class="pebble glass tint-honey" style="width:118px;height:100px;left:4%;bottom:28px;border-radius:52% 48% 58% 42% / 60% 48% 52% 40%"></div>
+    <div class="pebble glass tint-seafoam" style="width:92px;height:70px;left:38%;bottom:18px;border-radius:50%"></div>
+  </div>
+
+  <div id="os" hidden>
+    <header id="panel" class="glass tint-frost">
+      <div class="brand">
+        <span class="mark glass tint-seafoam" aria-hidden="true"></span>
+        <span>Shigurasu</span>
+      </div>
+      <button id="activities" type="button">Activities</button>
+      <div class="spacer"></div>
+      <time id="clock"></time>
+      <button id="status" type="button" aria-label="System status"></button>
+    </header>
+
+    <main id="desktop"></main>
+
+    <nav id="dock" class="glass tint-frost" aria-label="Applications"></nav>
+
+    <div id="overview" hidden>
+      <div>
+        <p class="ov-label">Open</p>
+        <div id="ov-windows" class="ov-windows"></div>
+      </div>
+      <div>
+        <p class="ov-label">Apps</p>
+        <div id="ov-apps" class="ov-apps"></div>
+      </div>
+    </div>
+
+    <div id="tray" class="pop glass tint-frost" hidden>
+      <label class="slider">Sound <input id="vol" type="range" min="0" max="100" value="70" /> <span id="vol-n">70%</span></label>
+      <div class="tray-row"><span>Network</span><span>shore</span></div>
+      <div class="tray-row"><span>Battery</span><span>86%</span></div>
+      <button id="lock-btn" type="button">Lock</button>
+    </div>
+
+    <div id="cmenu" class="pop glass tint-frost" role="menu" hidden></div>
+  </div>
+
+  <div id="lock">
+    <div class="lock-stack">
+      <p id="lock-time" class="lock-time">–:–</p>
+      <p id="lock-date" class="lock-date"></p>
+      <button id="enter" class="hero glass tint-seafoam" type="button">
+        <span class="word">Shigurasu</span>
+        <span class="hint">tap the glass</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="js/os.js"></script>
+</body>
+</html>
